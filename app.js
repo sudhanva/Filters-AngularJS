@@ -1,8 +1,19 @@
-var app = angular.module('myApp',[]);
+var app = angular.module('myApp',[
+	'ngRoute',
+	'artistController'
+]);
 
-app.controller('myController',['$scope','$http', function($scope,$http){
- $http.get('data.json').success(function(data){
-   $scope.artists = data;
-   $scope.artistOrder = 'name';
- }); 
+app.config(['$routeProvider',function($routeProvider){
+$routeProvider
+.when('/list',{
+	templateUrl: 'partials/list.html',
+	controller: 'ListController'
+})
+.when('/details/:itemId',{
+	templateUrl: 'partials/details.html',
+	controller:'DetailsController'
+})
+.otherwise({
+	redirectTo: '/list'
+})
 }]);
