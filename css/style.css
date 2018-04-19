@@ -193,15 +193,15 @@ a.small {
 }
 
 .search input {
-  font-family: 'Droid Sans', sans-serif;
-  width: 100%;
-  padding: 10px 0 10px 15px;
-  font-size: 1rem;
-  color: #475B62;
-  background: rgba(255,255,255,0.4);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
-  outline: 0;
+font-family: 'Droid Sans', sans-serif;
+    width: 100%;
+    padding: 10px 0 10px 15px;
+    font-size: 1rem;
+    color: black;
+    background: rgba(255, 255, 255, 0.71);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    outline: 0;
 }
 
 .search .formgroup input {
@@ -224,6 +224,7 @@ a.small {
   border: 1px solid rgba(0,0,0,0.3);
   border-radius: 10px;
   outline: 0;
+  color: white;
 }
 
 /* Artist List Styles */
@@ -278,7 +279,7 @@ a.small {
 }
 
 .artist:last-child {
-  border-bottom:none;
+     border-radius: 20px;
 }
 
 .artistinfo {
