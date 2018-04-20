@@ -9,7 +9,7 @@
       <label class="formgroup">Sort By
         <select ng-model="artistOrder">
           <option value="name">Name</option>
-          <option value="reKnown">ReKnown</option>
+          <option value="reKnown">College</option>
         </select>
       </label>
       <label class="formgroup">
@@ -23,8 +23,9 @@
     </div>
 
 
-    <ul class="artistlist">
-      <li class="artist cf" ng-repeat="item in artists |  filter:query | orderBy:artistOrder:direction">
+    <ul class="artistlist" ng-show="query">
+      <li ng-animate="'animate'" class="artist cf" ng-repeat="item in artists |  filter:query | orderBy:artistOrder:direction">
+
       	<a href="#/details/{{artists.indexOf(item)}}">
         <img ng-Src="images/{{item.shortname}}_tn.jpg" alt="photo of {{item.name}}">
         <div class="info">

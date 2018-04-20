@@ -1,6 +1,7 @@
 var app = angular.module('myApp',[
 	'ngRoute',
-	'artistController'
+	'artistController',
+	'ngAnimate'
 ]);
 
 app.config(['$routeProvider',function($routeProvider){
